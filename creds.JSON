@@ -1,0 +1,38 @@
+🔐 Google Drive Credentials (creds.json)
+This app optionally supports syncing rate files from a specific Google Drive folder using the Google Drive API. To enable this feature, you'll need to create a Service Account and download a creds.json file.
+
+📁 What creds.json Does:
+Authenticates the app to read files from your Google Drive folder (read-only)
+
+Must be placed in the root directory of the project
+
+⚙️ How to Generate creds.json
+
+Go to Google Cloud Console
+
+https://console.cloud.google.com/
+
+Create a new project or use an existing one
+
+Enable the Google Drive API for that project
+
+Go to APIs & Services → Credentials
+
+Click “Create Credentials” → “Service Account”
+
+After creating the account:
+
+Go to the account settings
+
+Under "Keys", create a new key → Choose JSON
+
+This downloads your creds.json file
+
+Rename it to just creds.json (if needed) and place it in your project root
+
+🔗 Grant Drive Access
+To let the service account access your Drive folder:
+
+Share the target folder (in Google Drive) with the service account email address (looks like your-service-name@your-project.iam.gserviceaccount.com)
+
+Give it Viewer access
